@@ -4,8 +4,10 @@ import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
 import compression from "compression";
 import cors from "cors";
-import pino from "pino/";
+import pino from "pino";
+import * as dotenv from "dotenv";
 
+dotenv.config();
 const logger = pino({});
 
 const app = express();
