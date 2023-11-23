@@ -3,7 +3,7 @@ import { logger } from "../utils/logger";
 
 const healthRouter: Router = Router();
 
-healthRouter.get("/", async (req: Request, res: Response) => {
+healthRouter.get("/healthcheck", async (req: Request, res: Response) => {
   try {
     logger.info("GET /healthcheck");
     await res.send("I'm alive and kicking!");
